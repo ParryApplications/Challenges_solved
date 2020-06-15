@@ -1,0 +1,26 @@
+package practice;
+
+import java.util.*; 	//used for scanner
+
+public class PracticeClass 
+{
+	public static void main(String args[]) 
+	{
+		int result =0;
+		int n = 452;
+		
+		int rough = n;
+		while(rough!=0) 
+		{
+			int a = rough % 10;	//ans 5
+			result = result*10+a;	//ans 0+5=5
+			rough/=10;	//ans 454/10=45
+		}
+		
+		if(result == n) {
+			System.out.println(n+" is a Palindrome Number");
+		}
+		else
+			System.out.println(n+" is Not a Palindrome Number");
+	}
+}
