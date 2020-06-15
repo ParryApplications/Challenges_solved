@@ -1,0 +1,26 @@
+package practice;
+
+import java.util.*; 	//used for scanner
+
+public class PracticeClass 
+{
+	public static void main(String args[]) 
+	{
+		int a,b;
+		
+		Scanner obj = new Scanner(System.in);
+		
+		a = obj.nextInt();
+		b= obj.nextInt();
+		
+		System.out.println("Before Swapping");
+		System.out.println("value of a : "+a+" Value of b: "+b);
+		
+		
+	    a = a+b;
+		b=a-b;
+		a=a-b;
+		System.out.println("After Swapping");
+		System.out.print("value of a : "+a +" Value of b: "+b);
+	}
+}
