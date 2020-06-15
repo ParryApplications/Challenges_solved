@@ -1,0 +1,38 @@
+package practice;
+
+import java.util.*; 	//used for scanner
+
+public class PracticeClass 
+{
+	public static void main(String args[]) 
+	{
+		int count =0;
+		
+		Scanner s = new Scanner(System.in);
+		
+		int number = s.nextInt();
+		
+		if(number > 1) 
+		{
+			for(int i=2;i<=number;i++) 
+			{
+				if(i%2==0) 
+				{
+					count++;
+				}
+			}
+			
+			if(count == 1) 
+			{
+				System.out.println(number+" is a Prime Number");
+			}
+			else {
+				System.out.println(number+" Not a Prime Number");
+			}
+		}
+		else 
+		{
+			System.out.println("Enter A Number Greater Then 1");
+		}
+	}
+}
