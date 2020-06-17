@@ -1,0 +1,46 @@
+package practice;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class PracticeClass 
+{
+	public static void main(String args[]) 
+	{
+		ArrayList list = new ArrayList<>();
+		
+		list.add("paras");
+		list.add("mummy");
+		list.add("papa");
+		list.add("cheru");
+		list.add("kishu");
+		list.add("rastogi");
+		list.add("love");
+		list.add("vishkha");
+		list.add("abhinav");
+		
+		
+		// FOR LOOP
+		
+//		for(int i=0;i<list.size();i++) 
+//		{
+//			System.out.println(list.get(i));
+//		}
+
+//		Iterator iterate = list.iterator();
+
+		// WHILE LOOP
+		
+//		while(iterate.hasNext()) 
+//		{
+//			System.out.println(iterate.next());
+//		}
+		
+		// ADVANCE FOR LOOP
+		
+//		for(Object obj : list) 
+//		{
+//			System.out.println(obj);
+//		}
+	}
+}
