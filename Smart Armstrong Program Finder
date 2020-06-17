@@ -1,0 +1,39 @@
+package practice;
+
+import java.util.Scanner;
+
+public class PracticeClass 
+{
+	public static void main(String args[]) 
+	{
+		int number,a,temp,count=0,result=0;
+		
+		Scanner s = new Scanner(System.in);
+		System.out.println("Enter a Number");
+		number = s.nextInt();
+		temp = number;
+		int no =temp; 
+		while(temp>0) 
+		{
+			
+			while(number !=0) 
+			{
+				number/=10;
+				count++;
+			}
+			
+			a = temp%10;
+			
+			result += Math.pow(a, count);
+			
+			temp/=10;
+			
+			
+		}
+		
+		if(result == no)
+		System.out.println(no+" is an Armstrong Number");
+		else
+			System.out.println(no+" is Not an Armstrong Number");
+	}
+}
