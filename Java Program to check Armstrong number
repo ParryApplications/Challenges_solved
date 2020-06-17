@@ -1,0 +1,19 @@
+package practice;
+
+public class PracticeClass 
+{
+	public static void main(String args[]) 
+	{
+		int a,temp,result=0,n=143;
+		temp = n;
+		while(n>0) 
+		{
+			a=n%10;
+			result = result+(a*a*a);
+			n = n/10;
+		}
+		
+		if(result == temp)
+			System.out.println("armstrong number");
+	}
+}
