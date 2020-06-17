@@ -1,0 +1,16 @@
+package practice;
+
+import java.util.Scanner;
+
+public class PracticeClass 
+{
+	public static void main(String args[]) 
+	{
+		String name = "Paras Bhatt   Good Boy";
+		System.out.println(name);
+		
+		String name2 = name.replaceAll("\\s","-");
+		
+		System.out.println(name2);
+	}
+}
