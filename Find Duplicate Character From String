@@ -1,0 +1,29 @@
+package practice;
+
+public class rough
+{
+	public static void main(String args[]) 
+	{
+		int count=1;
+		
+		String name = "Paras";
+//		System.out.println(name.length());
+		
+		char array[] = name.toCharArray();
+//		System.out.println(array.length);
+		
+		for(int i=1;i<name.length();i++) 
+		{			
+			for(int j=i+1;j<name.length();j++) 
+			{
+				if(array[i] == array[j]) 
+				{
+					count++;
+				}
+				else {}
+			}
+			System.out.println(array[i]+" :"+count);
+			count=0;
+		}
+	}
+}
