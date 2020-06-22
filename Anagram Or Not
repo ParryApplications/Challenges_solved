@@ -1,0 +1,47 @@
+package practice;
+
+import java.util.Arrays;
+
+public class rough
+{
+	static boolean status = true;
+	
+	//keep and peek
+	static void Anagram(String s1,String s2) 
+	{
+		String name1 = s1.replaceAll("\\s+", "");
+		String name2 = s2.replaceAll("\\s+", "");
+		
+		if(name1.length() != name2.length()) 
+		{
+			status = false;
+		}
+		else 
+		{
+			char array1[] = name1.toLowerCase().toCharArray();
+			char array2[] = name2.toLowerCase().toCharArray();
+			
+			Arrays.sort(array1);
+			Arrays.sort(array2);
+			
+			status = Arrays.equals(array1, array2);
+		}
+	}
+	
+	static void display() 
+	{
+		if(status == true)
+			System.out.println("Hence It Is An Anagram String");
+		else
+		System.out.println("Hence It Is Not An Anagram String");
+	}
+	
+	public static void main(String args[]) 
+	{
+		Anagram("keep","peek");
+		display();//for display
+		Anagram("paras","bhatt");
+		display();//for display
+		
+	}
+}
