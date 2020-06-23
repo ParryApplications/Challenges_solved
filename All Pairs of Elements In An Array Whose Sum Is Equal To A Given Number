@@ -1,0 +1,27 @@
+//PENDING QUESTIONS:
+//13)How to find largest number less than a given number and without a given digit?
+
+package practice;
+
+import java.util.Scanner;
+
+public class rough
+{
+	public static void main(String args[]) 
+	{
+		int[] array= {4, 5, 7, 11, 9, 13, 8, 12};
+		int GN = 20;
+		
+		for(int i=0;i<array.length;i++) 
+		{
+			for(int j=i+1;j<array.length;j++) 
+			{
+				if(array[i]+array[j] == 20) 
+				{
+					System.out.println("("+array[i]+","+array[j]+")");
+				}
+			}
+		}
+		
+	}
+}
