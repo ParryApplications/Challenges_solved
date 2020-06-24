@@ -1,0 +1,29 @@
+package practice;
+
+import java.util.Scanner;
+
+public class rough
+{
+	public static void main(String args[]) 
+	{
+		Scanner sc = new Scanner(System.in);
+		
+		int a = sc.nextInt();
+		int temp=a;
+		while(temp!=0) 
+		{
+			int r = temp%10;
+			
+			if(r == 1 || r == 0) 
+			{
+				temp/=10;
+			}
+			else {
+				System.out.println("This Number is not binary");
+			break;
+			}
+		}
+		if(temp==0)
+			System.out.println("This Number a binary");
+	}
+}
