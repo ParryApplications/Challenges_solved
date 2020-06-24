@@ -1,0 +1,39 @@
+//PENDING QUESTIONS:
+//13)How to find largest number less than a given number and without a given digit?
+//15) How to find continuous sub array whose sum is equal to given number?
+
+package practice;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+
+public class rough
+{
+	public static void main(String args[]) 
+	{
+		ArrayList<String> AL = new ArrayList<>();
+		
+		AL.add("paras");
+		AL.add("bhatt");
+		AL.add("bhatt");
+		AL.add("charu");
+		AL.add("paras");
+		AL.add("youtube");
+		
+		System.out.println("Before HashSet:\n"+AL);
+		HashSet<String> set = new HashSet<>(AL);
+		
+//		The important points about Java HashSet class are:
+
+//			HashSet stores the elements by using a mechanism called hashing.
+//			HashSet contains unique elements only.
+//			HashSet allows null value.
+//			HashSet class is non synchronized.
+//			HashSet doesn't maintain the insertion order. Here, elements are inserted on the basis of their hashcode.
+//			HashSet is the best approach for search operations.
+//			The initial default capacity of HashSet is 16, and the load factor is 0.75.
+			
+		ArrayList<String> ALD = new ArrayList<>(set);
+		System.out.println("After HashSet:\n"+ALD);
+	}
+}
