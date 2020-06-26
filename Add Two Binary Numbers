@@ -1,0 +1,16 @@
+package practice;
+
+//how to add 2 binary numbers
+
+public class rough
+{
+	public static void main(String args[]) 
+	{
+		String a = "1101",b="1110";
+		
+		Integer int_value_a = Integer.parseInt(a,2);
+		Integer int_value_b = Integer.parseInt(b,2);
+		
+		System.out.println("Ans: "+Integer.toBinaryString(int_value_a+int_value_b));
+	}
+}
