@@ -1,0 +1,39 @@
+package practice;
+
+class tutorial
+{
+	synchronized static void method2() 
+	{
+		for(int i=1;i<5;i++) 
+		{
+			System.out.println(i);
+
+				try {
+					Thread.sleep(3000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+
+		}
+	}
+}
+
+class t1 implements Runnable 
+{
+	public void run() 
+	{
+		tutorial.method2();
+	}
+}
+public class rough
+{
+	public static void main(String args[]) 
+	{
+		t1 obj = new t1();
+		Thread t = new Thread(obj);
+		Thread t2 = new Thread(obj);
+		t.start();
+		t2.start();
+	}
+}
