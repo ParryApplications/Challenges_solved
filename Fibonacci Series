@@ -1,0 +1,24 @@
+package practice;
+
+//how to add 2 binary numbers
+
+public class rough
+{
+	public static void main(String args[]) 
+	{
+		//fibonacci series
+		
+		int a=0,b=1,n=10;
+		
+		for(int i=1;i<=n;i++) 
+		{
+			System.out.print(a+" + ");
+			
+			int sum = a+b;
+			a=b;
+			b=sum;
+		}
+		System.out.print("...");
+		
+	}
+}
