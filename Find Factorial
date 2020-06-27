@@ -1,0 +1,26 @@
+package practice;
+
+import java.util.Scanner;
+
+//how to add 2 binary numbers
+
+public class rough
+{
+	public static void main(String args[]) 
+	{
+		int result = 1;
+		//factorial
+		
+		Scanner sc  =new  Scanner(System.in);
+		int a = sc.nextInt();
+		
+		while(a!=0) 
+		{
+			System.out.print(a+" * ");
+			result *=a;
+			a--;
+			
+		}
+		System.out.print("= "+result);
+	}
+}
