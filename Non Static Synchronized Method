@@ -1,0 +1,44 @@
+package practice;
+
+class sync
+{
+	synchronized void main()
+	{
+		for(int i=1;i<4;i++) 
+		{
+			System.out.println(i);
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+}
+
+class t1 extends Thread
+{
+	sync s;
+	t1(sync s)
+	{
+		this.s = s;
+	}
+	
+	public void run() 
+	{
+		s.main();
+	}
+}
+
+public class rough
+{
+	public static void main(String args[])
+	{
+		sync obj3 = new sync();
+		t1 obj = new t1(obj3);
+		t1 obj1 = new t1(obj3);
+		obj.start();
+		obj1.start();
+	}
+}
