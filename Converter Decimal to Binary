@@ -1,0 +1,40 @@
+package practice;
+
+import java.util.*;
+
+public class rough 
+{
+	
+	
+	public static void main(String args[]) 
+	{
+		int reminder;
+		List result;
+		int quotient,val,i;
+		
+		result = new ArrayList<>();
+		
+		Scanner sc = new Scanner(System.in);
+		val = sc.nextInt();
+		
+		//code begins
+		
+		do
+		{
+			reminder = val%2;
+			result.add(reminder);
+			quotient = val/2;
+			val=quotient;
+		}while(val!=1);		
+		result.add(1);
+		
+		ListIterator iterate = result.listIterator(result.size());
+		
+		while(iterate.hasPrevious()) 
+		{
+			System.out.print(iterate.previous());
+		}
+		
+		System.gc();
+	}    
+}
