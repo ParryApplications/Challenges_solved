@@ -15,6 +15,7 @@ public class rough
 		result = new ArrayList<>();
 		
 		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter A decimal Digit");
 		val = sc.nextInt();
 		
 		//code begins
