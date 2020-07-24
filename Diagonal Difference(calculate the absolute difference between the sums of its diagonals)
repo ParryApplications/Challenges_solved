@@ -37,7 +37,7 @@ public class Solution
         {
             for(int j=0;j<m;j++)
             {
-                if(i+j==2)
+                if(i+j==(m-1))
                 rl += array[i][j];
             }
         }
