@@ -1,0 +1,50 @@
+import java.util.*;
+
+public class Solution
+{
+    public static void main(String args[])
+    {
+        int rl=0,lr=0,abs;
+
+        Scanner sc = new Scanner(System.in);
+        // System.out.println("Enter The Size Of An Array");
+        int m = sc.nextInt();
+        
+        // System.out.println("Now Enter The Element In The Array");
+
+        int[][] array = new int[m][m];
+
+        for(int i=0;i<m;i++)
+        {
+            for(int j=0;j<m;j++)
+            {
+                array[i][j] = sc.nextInt();
+            }
+        }
+//lr
+        for(int i=0;i<m;i++)
+        {
+            for(int j=0;j<m;j++)
+            {
+                if(i==j)
+                {
+                    lr += array[i][j];
+                }
+            }
+        }
+//rl
+        for(int i=0;i<m;i++)
+        {
+            for(int j=0;j<m;j++)
+            {
+                if(i+j==2)
+                rl += array[i][j];
+            }
+        }
+            
+        // System.out.println("lr: "+lr+" \n rl: "+rl);
+        abs = lr-rl;
+
+        System.out.println(Math.abs(abs));
+    }
+}
