@@ -1,0 +1,43 @@
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+public class Solution 
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+
+        long[] array = new long[5];   //beware of integer 64bit size
+        List list = new ArrayList<>();
+
+        long sum=0; 
+        int t=0;
+
+        for(int i=0;i<array.length;i++)
+        {
+            array[i] = sc.nextInt();
+        }
+
+        while(t!=5)
+        {
+            for(int i=0;i<array.length;i++)
+            {
+                sum+=array[i];
+            }
+
+            sum-=array[t];
+            list.add(sum);
+            sum=0;
+            t++;
+        }
+
+        Collections.sort(list);
+
+        System.out.print(list.get(0)+ " " +list.get(4));
+    }
+}
