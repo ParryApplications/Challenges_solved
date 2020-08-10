@@ -1,0 +1,40 @@
+package practice;
+import java.util.*;
+
+public class rough2 
+{
+     public static void main(String []args)
+     {
+    	 Scanner sc = new Scanner(System.in);
+    	 System.out.println("Enter The Size Of An Array");
+    	 int size=sc.nextInt();
+    	 
+    	 int[] array = new int[size];
+    	 
+    	 System.out.println("Enter The Elements");
+    	 
+    	 for(int i=0;i<size;i++) 
+    	 {
+    		 array[i]=sc.nextInt();
+    	 }
+    	 int p=0;
+    	 while(p!=size) 
+    	 {
+    		 for(int i=0;i<size-1;i++) 
+    		 {
+    				 if(array[i]>array[i+1])
+    				 {
+    					 
+    					 int temp = array[i];
+    					 array[i]=array[i+1];
+    					 array[i+1]=temp;
+    				 }
+    		 }
+    		 p++;
+    	 }
+    	 for(int i=0;i<size;i++)
+    	 {
+    		 System.out.print(array[i]+" ");
+    	 }
+     }	
+}
