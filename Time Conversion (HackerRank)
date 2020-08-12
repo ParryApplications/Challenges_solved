@@ -1,0 +1,63 @@
+import java.io.*;
+import java.math.*;
+import java.text.*;
+import java.util.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    /*
+     * Complete the timeConversion function below.
+     */
+    static String timeConversion(String s) {
+        /*
+         * Write your code here.
+         */
+         char[] array = s.toCharArray();
+
+         
+         if(array[8] == 'P')   
+         {
+             if(array[0] == '1' && array[1] == '2') 
+             {
+                 
+             }
+             
+             else {
+             int a = (int) array[0];
+         int b = (int) array[1];
+
+         int suma = a+1;
+         int sumb = b+2;
+
+         array[0] = (char) suma;
+         array[1] = (char) sumb;
+             }
+         }
+         else if(array[0] == '1' && array[1] == '2') 
+         {
+                array[0] = '0';
+                array[1] = '0';
+         }
+         
+String final1 = "";
+
+         for(int i=0;i<array.length-2;i++)
+         {
+             final1 += ""+array[i];
+         }
+
+        return final1;
+    }
+
+    private static final Scanner scan = new Scanner(System.in);
+
+    public static void main(String[] args) throws IOException {
+        
+        String s = scan.nextLine();
+
+        System.out.println(timeConversion(s));
+        
+    }
+
+}
