@@ -1,0 +1,56 @@
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    // Complete the birthdayCakeCandles function below.
+    int birthdayCakeCandles(int[] ar) 
+    {        
+        int max=0;
+
+        int count=1;
+                        
+        for(int i=0;i<=ar.length-2;i++)
+        {
+            while(i==0)
+            {
+                max = ar[i];
+                break;
+            }
+            
+
+            if(max>=ar[i+1])
+            {
+                if(max==ar[i+1])
+                count++;
+            }
+            else if(max<ar[i+1])
+            {
+                max=ar[i+1];
+            }
+            
+        }
+//        System.out.println(count);
+        return count;
+    }
+
+    private static final Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) throws IOException {
+        
+        int arCount = scanner.nextInt();
+        
+        int[] ar = new int[arCount];
+
+        for (int i = 0; i < arCount; i++) {
+            ar[i] = scanner.nextInt();
+        }
+        Solution obj = new Solution();
+        System.out.println(obj.birthdayCakeCandles(ar));
+    }
+}
