@@ -1,0 +1,33 @@
+package practice;
+
+import java.util.*;
+
+public class rough2
+{
+	public static void main(String args[]) 
+	{
+		int[] array = {3,4,6,87,9,11,10,17};
+		List list = new ArrayList<>();
+		boolean isprime=true;
+		int temp=0;
+		for(int j=0;j<array.length;j++) 
+		{
+			for(int i=2;i<array[j];i++) 
+			{
+				if(array[j]%i==0) 
+				{
+					isprime = false;
+				}
+			}
+			if(isprime) 
+			{
+				list.add(array[j]);
+			}
+			isprime=true;
+		}
+				Collections.sort(list);
+//			for(int i=0;i<list.size();i++)
+			System.out.println("Prime Number are:\n"+list.get(list.size()-1));
+		
+	}
+}
