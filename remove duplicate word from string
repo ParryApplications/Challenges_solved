@@ -1,0 +1,23 @@
+package practice;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
+
+public class rough2
+{
+	public static void main(String args[]) 
+	{	
+		Scanner sc = new Scanner(System.in);
+		
+		String string = sc.nextLine();
+
+        string = Arrays.stream(string.split("\\s+")).distinct().collect(Collectors.joining(" "));
+
+        System.out.println(string);
+	}
+}
