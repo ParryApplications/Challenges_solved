@@ -1,0 +1,53 @@
+package practice;
+
+import java.util.*;
+
+public class rough
+{
+	static List<Integer> fn(int[] ar) 
+	{
+		List<Integer> result = new ArrayList<>();
+		int count;
+		for(int i=0;i<ar.length;i++) 
+		{
+			count=0;
+			for(int j=2;j<=(ar[i]);j++) 
+			{
+				if(ar[i]%j==0)
+				{
+					count++;
+				}
+				else
+					continue;
+			}
+			if(count==1)
+			{
+				result.add(ar[i]);
+			}
+		}
+		
+		Collections.sort(result);
+		int min = result.get(0);
+		int max = result.get((result.size()-1));
+		result.clear();
+		
+		result.add(min);
+		result.add(max);
+		
+		return result;
+	}
+	
+	public static void main(String args[])
+	{
+		int[] ar = {67,5,68,3,1,6,4,6,8,7,3,6,4,3,5};
+		
+		List<Integer> result = fn(ar);
+		
+		Iterator iterate = result.iterator();
+		
+		while(iterate.hasNext()) 
+		{
+			System.out.println(iterate.next());
+		}
+	}
+}
