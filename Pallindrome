@@ -1,0 +1,27 @@
+package practice;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Scanner;
+
+public class rough
+{
+	public static void main(String args[]) 
+	{
+		int n=314;
+		int temp = n,sum=0;
+		
+		while(temp!=0)
+		{
+			int r = temp%10;
+			sum = sum*10 + r;
+			temp = temp/10;
+			System.out.println(sum);
+		}
+		if(sum!=n)
+			System.out.println("Not a Pallindrome");
+		else
+			System.out.println("Pallindrome");
+	}
+}
